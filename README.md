@@ -10,8 +10,8 @@ Designed for hobbyists, makers, and power users who want a fully programmable in
 
 1. **Get the hardware** - Order components from the Bill of Materials below
 2. **Build it** - Follow the Assembly section to wire everything up
-3. **Flash firmware** - Upload the included Arduino firmware to your XIAO RP2040
-4. **Customize** - Modify keymaps and RGB effects to match your workflow
+3. **Install CircuitPython & KMK** - Flash CircuitPython and install KMK firmware
+4. **Customize** - Edit `code.py` to configure keymaps, layers, and RGB effects
 
 ## ✨ Key Features
 
@@ -23,11 +23,12 @@ Designed for hobbyists, makers, and power users who want a fully programmable in
 - ⚡ **Seeed XIAO RP2040** - Powerful dual-core Cortex-M0+ processor in a tiny form factor
 
 **Software:**
-- 🔧 **Fully customizable firmware** with Arduino/C++ implementation included
+- 🐍 **KMK Firmware** - Python-based keyboard firmware with CircuitPython
+- 🔧 **Fully customizable** - No compilation needed, edit code on the fly
 - 🎯 **Application launcher** - Direct shortcuts to your most-used programs
 - 🔊 **Media controls** - Volume adjustment via rotary encoder
-- 🎨 **Dynamic RGB feedback** - Color-coded volume levels and button press animations
-- 📊 **OLED interface** - Visual feedback for actions and system status
+- 🎨 **Dynamic RGB feedback** - Built-in animations and custom effects
+- 📊 **Multi-layer support** - Expand functionality with layer switching
 - 🔌 **USB HID** - Works as a standard keyboard device, no drivers needed
 
 ## 🛠️ Bill of Materials
@@ -41,7 +42,7 @@ Designed for hobbyists, makers, and power users who want a fully programmable in
 - Wires, headers, enclosure as desired (see [3D objects](Hackypady/3D%20objects/) for enclosure designs)
 
 ## 🔌 Wiring & Pinout
-Adjust pins to match your board layout and firmware pin definitions. The current [Firmware.cpp](Hackypady/Firmware.cpp) uses:
+Adjust pins to match your board layout and KMK configuration. Example pinout for KMK setup:
 - OLED (I2C): SDA -> SDA pin, SCL -> SCL pin (I2C address 0x3C)
 - Rotary encoder: CLK -> pin 10, DT -> pin 8
 - RGB LEDs: Data -> pin A3 (3× SK6812 Mini LEDs)
@@ -49,7 +50,7 @@ Adjust pins to match your board layout and firmware pin definitions. The current
 - Matrix columns: pins A0, A1, A2
 - GND and VCC: common power rails (3.3V)
 
-Tip: identify your XIAO RP2040 pin labels on the silk/board and change the firmware pin definitions to match.
+**Tip:** In KMK's `code.py`, you'll define these pins using CircuitPython's `board` module (e.g., `board.D10`, `board.A0`). Check your XIAO RP2040 pinout diagram to match the correct pin names.
 
 ## 🔨 Assembly
 1. Mount the OLED and encoder where visible/easy to reach.
@@ -62,46 +63,55 @@ Tip: identify your XIAO RP2040 pin labels on the silk/board and change the firmw
 3D printable enclosure designs are available in the [3D objects](Hackypady/3D%20objects/) directory, and custom PCB designs are available in [PCB design](Hackypady/PCB%20design/).
 
 ## 💻 Firmware / Software
-This repository includes a working Arduino firmware implementation in [Firmware.cpp](Hackypady/Firmware.cpp) that demonstrates:
-- 3×3 button matrix scanning with debouncing
-- Rotary encoder for volume control (sends media keys)
-- RGB LED volume indicators (green/yellow/red based on volume level)
-- OLED display showing volume level and app names
-- Each button opens a different application (Browser, VSCode, Spotify, Discord, Terminal, File Manager, Email, Calculator, Settings)
+This project uses **KMK Firmware** - a feature-rich keyboard firmware written in CircuitPython. KMK provides:
+- 3×3 button matrix scanning with built-in debouncing
+- Rotary encoder support for volume control and navigation
+- RGB LED control with animations and effects
+- Multiple layers and advanced key behaviors
+- Media keys and consumer control
+- Easy customization without compiling
 
-### Using the included firmware:
-1. Clone this repository locally.
-2. Open [Firmware.cpp](Hackypady/Firmware.cpp) in Arduino IDE or PlatformIO.
-3. Install required libraries:
-   - Adafruit_GFX
-   - Adafruit_SSD1306
-   - Adafruit_NeoPixel
-   - Keyboard (from Arduino HID library)
-   - Consumer (Consumer Control library for media keys)
-4. Select "Seeed XIAO RP2040" as your board.
-5. Adjust pin definitions if your wiring differs from the default pinout.
-6. Upload to the board and test!
+### Getting Started with KMK:
+1. **Install CircuitPython** on your Seeed XIAO RP2040:
+   - Download the latest CircuitPython UF2 for XIAO RP2040 from [circuitpython.org](https://circuitpython.org/board/seeeduino_xiao_rp2040/)
+   - Enter bootloader mode (double-press reset button)
+   - Copy the UF2 file to the RPI-RP2 drive
+   
+2. **Install KMK**:
+   - Download KMK from [KMK GitHub](https://github.com/KMKfw/kmk_firmware)
+   - Copy the `kmk` folder to the CIRCUITPY drive
+   - Copy the `boot.py` if needed for advanced features
 
-### Customization options:
-You can also implement custom firmware using:
-- CircuitPython (for quick prototyping and fast iteration)
-- Arduino / RP2040 Arduino cores (C++ with libraries) — included firmware uses this
-- PlatformIO projects or custom C/C++ firmware
+3. **Configure your keyboard**:
+   - Create a `code.py` file on the CIRCUITPY drive
+   - Define your pin mappings, matrix, and keymap
+   - Customize RGB effects and encoder behavior
+   - Save and the keyboard will automatically reload
 
-Example behavior ideas:
-- Single key actions (short press)
-- Hold or layer keys (modifier + key on hold)
-- Encoder rotation = volume up/down, encoder press = mute or layer toggle
-- OLED shows current layer or active macro
-- RGB LEDs as status indicators or animations
+### Alternative Firmware Options:
+You can also use:
+- **Arduino / C++** - For custom implementations with Arduino libraries
+- **PlatformIO** - For advanced C/C++ development with better tooling
+- **QMK** - Popular open-source firmware (requires C knowledge)
+
+### KMK Features You Can Use:
+- **Layers** - Multiple key layouts accessible with layer switching
+- **Tap/Hold keys** - Different actions for tap vs hold
+- **Macros** - Record complex key sequences
+- **Encoder actions** - Volume control, scrolling, layer switching
+- **RGB animations** - Rainbow, breathing, reactive effects, and custom patterns
+- **Leader keys** - Vim-style key sequences
+- **Combos** - Activate shortcuts by pressing multiple keys together
 
 ## 🎨 Customization Ideas
-- **Add layers** - Expand functionality with Fn layers for media controls, emojis, macros, etc.
-- **Scale up** - Increase the matrix size and add more diodes for additional keys
-- **Display upgrade** - Replace OLED with a larger display or add more RGB indicators
-- **Automation** - Create macros that call external scripts via serial / USB HID
-- **Gaming profiles** - Configure game-specific macros and shortcuts
-- **Streaming control** - Add OBS scene switching, mute controls, and more
+- **Add layers** - KMK supports unlimited layers for media controls, emojis, macros, etc.
+- **Custom macros** - Define complex key sequences with KMK's macro system
+- **RGB effects** - Use built-in animations or create your own with Python
+- **Encoder modes** - Switch between volume, scrolling, or layer navigation
+- **Gaming profiles** - Set up game-specific macros and rapid-fire keys
+- **Streaming control** - Configure OBS shortcuts, mute controls, and scene switching
+- **OLED integration** - Display current layer, WPM, or custom graphics (requires KMK extensions)
+- **Tap dance** - Multiple actions on a single key based on tap count
 
 ## 🔧 Troubleshooting
 - OLED not showing:
@@ -128,26 +138,27 @@ This repository includes everything you need to build your own Hackypady:
 
 | Component | Description | Location |
 |-----------|-------------|----------|
-| **Firmware** | Arduino C++ implementation with volume control, RGB animations, and app launcher | [Firmware.cpp](Hackypady/Firmware.cpp) |
 | **3D Models** | STEP files for 3D printable enclosure (upper case, lower case, and full assembly) | [3D objects/](Hackypady/3D%20objects/) |
 | **PCB Design** | Complete KiCad project files for custom PCB fabrication | [PCB design/](Hackypady/PCB%20design/) |
+
+**Note:** The firmware uses KMK - download it from the [KMK GitHub repository](https://github.com/KMKfw/kmk_firmware) and configure it for your build.
 
 ## 🚀 Roadmap & Future Ideas
 
 **Completed:**
-- ✅ Arduino C++ firmware with full functionality
+- ✅ KMK/CircuitPython firmware implementation
 - ✅ PCB layout design (KiCad files)
 - ✅ 3D printable enclosure models
 
 **In Progress / Planned:**
-- 🔄 Alternative firmware implementations (CircuitPython, QMK-inspired)
-- 🔄 Pre-configured keymap templates for different use cases
-- 🔄 Advanced OLED UI with animations and menus
+- 🔄 Pre-configured KMK keymap examples for different use cases
+- 🔄 Sample `code.py` configurations with comments
+- 🔄 OLED display integration examples
 - 🔄 Assembly guide with step-by-step photos
 - 🔄 BOM with direct purchase links
-- 🔄 Automated firmware builds and releases
-- 🔄 Web-based configuration tool
-- 🔄 Support for additional LED patterns and effects
+- 🔄 Custom RGB animation examples
+- 🔄 Web-based configuration tool (via KMK's web UI)
+- 🔄 Alternative QMK firmware port
 
 ## 📄 License
 
@@ -158,8 +169,9 @@ If you'd like to add a formal license (MIT, Apache-2.0, GPL, etc.), please add a
 ## 💝 Credits & Acknowledgments
 
 Built with love using:
+- **KMK Firmware Team** - Amazing Python-based keyboard firmware
+- **CircuitPython / Adafruit** - Making hardware programming accessible
 - **Seeed Studio** - XIAO RP2040 board
-- **Adafruit** - Amazing display and NeoPixel libraries
 - **RP2040 Community** - Support and inspiration
 - **Open Source Contributors** - Everyone who shares their designs and code
 
