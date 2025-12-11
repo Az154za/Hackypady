@@ -11,7 +11,7 @@
 
 *Transform your workflow with a DIY programmable macro keyboard built on the powerful Seeed XIAO RP2040*
 
-[Features](#-key-features) • [Getting Started](#-quick-start) • [Build Guide](#-assembly) • [Contributing](CONTRIBUTING.md) • [Community](#-community)
+[Features](#-key-features) • [Getting Started](#-quick-start) • [Build Guide](#-assembly) • [Contributing](CONTRIBUTING.md) • [Community](#-community) • [Project Structure](docs/PROJECT_STRUCTURE.md)
 
 ---
 
@@ -47,6 +47,8 @@ Designed for hobbyists and makers who want a small, programmable input device fo
 ## 🚀 Quick Start
 
 Ready to build your own Hackypady? Here's what you need to get started:
+
+> 📖 **New to this?** Check out our [Quick Start Guide](docs/QUICK_START.md) for a step-by-step walkthrough!
 
 ### Prerequisites
 - Basic soldering skills
@@ -335,6 +337,13 @@ Built something cool with Hackypady? We'd love to see it! Share your builds in [
 
 ## 📚 Additional Resources
 
+### Documentation
+- 📖 [Project Structure](docs/PROJECT_STRUCTURE.md) - Repository organization guide
+- ❓ [FAQ](docs/FAQ.md) - Frequently asked questions
+- 🤝 [Contributing Guide](CONTRIBUTING.md) - How to contribute
+- 📜 [Code of Conduct](CODE_OF_CONDUCT.md) - Community standards
+
+### External Resources
 - 📖 [Seeed XIAO RP2040 Documentation](https://wiki.seeedstudio.com/XIAO-RP2040/)
 - 🎨 [KiCad PCB Design Tutorial](https://docs.kicad.org/master/en/getting_started_in_kicad/)
 - 🔧 [Arduino RP2040 Core](https://github.com/earlephilhower/arduino-pico)

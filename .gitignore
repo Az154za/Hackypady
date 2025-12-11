@@ -1,0 +1,90 @@
+# Hackypady .gitignore
+
+# Arduino/PlatformIO build artifacts
+*.o
+*.a
+*.elf
+*.hex
+*.bin
+*.map
+.pio/
+.vscode/
+.pioenvs/
+.piolibdeps/
+
+# KiCad backup and temporary files
+*-backups/
+*-rescue.lib
+*-cache.lib
+*-save.kicad_pcb
+*.bak
+*.bck
+*~
+_autosave-*
+*.tmp
+*-bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_prl
+*.kicad_pro-bak
+fp-info-cache
+*.xml
+*.net
+*.dsn
+*.ses
+*.kicad_pcb.lck
+
+# 3D model temporary files
+*.stl~
+*.step~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+.idea/
+*.iml
+.vscode/settings.json
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+
+# Build directories
+build/
+dist/
+*.egg-info/
+
+# Python (if using CircuitPython)
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Temporary files
+tmp/
+temp/
+*.log
+
+# Gerber output (optional - remove if you want to commit gerbers)
+# gerbers/
+# *.zip
+
+# Documentation build artifacts (if using Sphinx, etc.)
+docs/_build/
+docs/.doctrees/
+
+# Local environment variables
+.env
+.env.local
+
+# Test files
+test-output/
+test-results/
