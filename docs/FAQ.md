@@ -52,7 +52,7 @@ The default firmware is written in C++ for Arduino. However, you can also use:
 - **QMK Firmware** - Advanced keyboard firmware (planned support)
 
 ### How do I customize what each button does?
-Open `Hackypady/Firmware.cpp` and find the `handleButtonPress()` function (around line 167). Each button has a case statement that defines its action. Simply change the function calls or add your own!
+Open `Hackypady/Firmware.cpp` and find the `handleButtonPress()` function (search for "handleButtonPress" in the file). Each button has a case statement that defines its action. Simply change the function calls or add your own!
 
 Example:
 ```cpp
@@ -127,7 +127,7 @@ Yes! STEP files are provided in `Hackypady/3D objects/`. Common settings:
 - Verify diode orientation (cathode/black line toward columns)
 - Check for cold solder joints
 - Test continuity with a multimeter
-- Verify pin definitions match your wiring
+- Verify pin definitions in firmware (search for "rowPins" and "colPins" at the top of Firmware.cpp) match your actual wiring
 - Check for loose connections
 
 ### The OLED shows gibberish or nothing

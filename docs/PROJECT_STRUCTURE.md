@@ -55,10 +55,10 @@ The main Arduino firmware file containing:
 - USB HID keyboard/media control
 
 **Key sections:**
-- Lines 18-35: Pin definitions (easily customizable)
-- Lines 167-215: Button press handlers (modify for custom actions)
-- Lines 242-279: Application launcher functions
-- Lines 359-390: LED effects and animations
+- Pin definitions (search for "PIN DEFINITIONS" section - easily customizable)
+- Button press handlers (search for "handleButtonPress" function - modify for custom actions)
+- Application launcher functions (search for "openApp" function)
+- LED effects and animations (search for "updateLEDs" and "flashLEDs" functions)
 
 ### Hackypady/PCB design/
 
@@ -113,8 +113,8 @@ GitHub-specific configuration:
 
 ### For Firmware Customization
 1. Open **Hackypady/Firmware.cpp**
-2. Modify pin definitions (lines 18-35)
-3. Customize button actions (lines 167-215)
+2. Modify pin definitions (search for "PIN DEFINITIONS" section near the top)
+3. Customize button actions (search for "handleButtonPress" function)
 4. Adjust debounce/timing as needed
 5. Flash to your XIAO RP2040
 

@@ -123,7 +123,8 @@ This guide will help you get your Hackypady up and running as quickly as possibl
    ```
 
 3. **Verify Pin Definitions**
-   - Check lines 18-35 match your wiring
+   - Look for the "PIN DEFINITIONS" section near the top of the file
+   - Verify the pin assignments match your wiring
    - Modify if you used different pins
 
 4. **Upload**
