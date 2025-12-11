@@ -26,10 +26,10 @@ Designed for hobbyists and makers who want a small, programmable input device fo
 ## Suggested wiring / pinout (example)
 Adjust pins to match your board layout and firmware pin definitions. The current [Firmware.cpp](Hackypady/Firmware.cpp) uses:
 - OLED (I2C): SDA -> SDA pin, SCL -> SCL pin (I2C address 0x3C)
-- Rotary encoder: CLK -> GPIO 10, DT -> GPIO 8
-- RGB LEDs: Data -> GPIO A3 (3× SK6812 Mini LEDs)
-- Matrix rows: GPIO 11, 6, 9
-- Matrix columns: GPIO A0, A1, A2
+- Rotary encoder: CLK -> pin 10, DT -> pin 8
+- RGB LEDs: Data -> pin A3 (3× SK6812 Mini LEDs)
+- Matrix rows: pins 11, 6, 9
+- Matrix columns: pins A0, A1, A2
 - GND and VCC: common power rails (3.3V)
 
 Tip: identify your XIAO RP2040 pin labels on the silk/board and change the firmware pin definitions to match.
@@ -59,8 +59,8 @@ This repository includes a working Arduino firmware implementation in [Firmware.
    - Adafruit_GFX
    - Adafruit_SSD1306
    - Adafruit_NeoPixel
-   - Keyboard (HID)
-   - Consumer (for media keys)
+   - Keyboard (from Arduino HID library)
+   - Consumer (Consumer Control library for media keys)
 4. Select "Seeed XIAO RP2040" as your board.
 5. Adjust pin definitions if your wiring differs from the default pinout.
 6. Upload to the board and test!
