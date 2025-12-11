@@ -50,7 +50,7 @@ Adjust pins to match your board layout and KMK configuration. Example pinout for
 - Matrix columns: pins A0, A1, A2
 - GND and VCC: common power rails (3.3V)
 
-**Tip:** In KMK's `code.py`, you'll define these pins using CircuitPython's `board` module (e.g., `board.D10`, `board.A0`). Check your XIAO RP2040 pinout diagram to match the correct pin names.
+**Tip:** In KMK's `code.py`, you'll define these pins using CircuitPython's `board` module. For XIAO RP2040, use pin names like `board.D0`, `board.D1`, `board.A0`, `board.A1`, etc. Refer to the [XIAO RP2040 CircuitPython pinout](https://circuitpython.org/board/seeeduino_xiao_rp2040/) to match physical pins to their CircuitPython names.
 
 ## 🔨 Assembly
 1. Mount the OLED and encoder where visible/easy to reach.
@@ -78,9 +78,10 @@ This project uses **KMK Firmware** - a feature-rich keyboard firmware written in
    - Copy the UF2 file to the RPI-RP2 drive
    
 2. **Install KMK**:
-   - Download KMK from [KMK GitHub](https://github.com/KMKfw/kmk_firmware)
-   - Copy the `kmk` folder to the CIRCUITPY drive
-   - Copy the `boot.py` if needed for advanced features
+   - Download KMK from [KMK GitHub](https://github.com/KMKfw/kmk_firmware) (click Code → Download ZIP)
+   - Extract the ZIP file on your computer
+   - Copy the entire `kmk` folder (from inside the extracted folder) to the root of your CIRCUITPY drive
+   - Optional: Copy `boot.py` to CIRCUITPY for advanced features like USB HID configuration
 
 3. **Configure your keyboard**:
    - Create a `code.py` file on the CIRCUITPY drive
