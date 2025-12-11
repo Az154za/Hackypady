@@ -42,15 +42,26 @@ Designed for hobbyists, makers, and power users who want a fully programmable in
 - Wires, headers, enclosure as desired (see [3D objects](Hackypady/3D%20objects/) for enclosure designs)
 
 ## 🔌 Wiring & Pinout
-Adjust pins to match your board layout and KMK configuration. Example pinout for KMK setup:
+Example hardware connections (adjust to match your build):
 - OLED (I2C): SDA -> SDA pin, SCL -> SCL pin (I2C address 0x3C)
-- Rotary encoder: CLK -> pin 10, DT -> pin 8
+- Rotary encoder: CLK -> pin 10 (D10), DT -> pin 8 (D8)
 - RGB LEDs: Data -> pin A3 (3× SK6812 Mini LEDs)
-- Matrix rows: pins 11, 6, 9
+- Matrix rows: pins 11 (D11), 6 (D6), 9 (D9)
 - Matrix columns: pins A0, A1, A2
 - GND and VCC: common power rails (3.3V)
 
-**Tip:** In KMK's `code.py`, you'll define these pins using CircuitPython's `board` module. For XIAO RP2040, use pin names like `board.D0`, `board.D1`, `board.A0`, `board.A1`, etc. Refer to the [XIAO RP2040 CircuitPython pinout](https://circuitpython.org/board/seeeduino_xiao_rp2040/) to match physical pins to their CircuitPython names.
+**For KMK Configuration:**
+In your `code.py`, define these pins using CircuitPython's `board` module:
+```python
+# Example pin definitions for XIAO RP2040
+encoder_a = board.D10    # Physical pin 10
+encoder_b = board.D8     # Physical pin 8
+rgb_data = board.A3      # Physical pin A3
+row_pins = (board.D11, board.D6, board.D9)
+col_pins = (board.A0, board.A1, board.A2)
+```
+
+Refer to the [XIAO RP2040 CircuitPython pinout](https://circuitpython.org/board/seeeduino_xiao_rp2040/) for complete pin mapping.
 
 ## 🔨 Assembly
 1. Mount the OLED and encoder where visible/easy to reach.
@@ -139,10 +150,11 @@ This repository includes everything you need to build your own Hackypady:
 
 | Component | Description | Location |
 |-----------|-------------|----------|
+| **Legacy Firmware** | Arduino C++ reference implementation (deprecated, use KMK instead) | [Firmware.cpp](Hackypady/Firmware.cpp) |
 | **3D Models** | STEP files for 3D printable enclosure (upper case, lower case, and full assembly) | [3D objects/](Hackypady/3D%20objects/) |
 | **PCB Design** | Complete KiCad project files for custom PCB fabrication | [PCB design/](Hackypady/PCB%20design/) |
 
-**Note:** The firmware uses KMK - download it from the [KMK GitHub repository](https://github.com/KMKfw/kmk_firmware) and configure it for your build.
+**Note:** This project now uses **KMK firmware** (Python/CircuitPython). Download KMK from the [KMK GitHub repository](https://github.com/KMKfw/kmk_firmware). The Arduino C++ firmware is kept for reference but is no longer actively maintained.
 
 ## 🚀 Roadmap & Future Ideas
 
