@@ -10,7 +10,7 @@ Designed for hobbyists, makers, and power users who want a fully programmable in
 
 1. **Get the hardware** - Order components from the Bill of Materials below
 2. **Build it** - Follow the Assembly section to wire everything up
-3. **Install CircuitPython & KMK** - Flash CircuitPython and install KMK firmware
+3. **Flash CircuitPython & Install KMK** - Flash CircuitPython to the board and install KMK firmware
 4. **Customize** - Edit `code.py` to configure keymaps, layers, and RGB effects
 
 ## ✨ Key Features
