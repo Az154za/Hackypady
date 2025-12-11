@@ -1,7 +1,7 @@
 # Hackypady
 
 Hackypady is a compact, highly-customizable macro keyboard built around the Seeed XIAO RP2040.  
-It combines a 0.91" OLED display, a rotary encoder, 3× RGB LEDs, and a 9-button matrix (3×3) using only 6 GPIO pins.  
+It combines a 0.91" OLED display, a rotary encoder, 3× RGB LEDs, and a 9-button matrix (3×3).  
 Designed for hobbyists and makers who want a small, programmable input device for shortcuts, media control, macros or external automation.
 
 ## Key features
