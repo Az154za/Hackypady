@@ -1,0 +1,52 @@
+# Build artifacts
+*.hex
+*.bin
+*.elf
+*.o
+*.d
+*.lst
+*.map
+*.sym
+
+# QMK specific
+.build/
+*.lock
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+
+# Logs
+*.log
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# Temporary files
+/tmp/
+*.tmp
+*.bak
+
+# Hardware
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_prl
+*.kicad_pro-bak
+
+# VIA JSON (optional - remove if you want to commit)
+# via_layout.json
