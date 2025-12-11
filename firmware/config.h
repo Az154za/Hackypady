@@ -7,8 +7,6 @@
 
 #pragma once
 
-#include "config_common.h"
-
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x6060
@@ -56,7 +54,7 @@
 #endif
 
 /* OLED Display */
-#ifdef OLED_DRIVER_ENABLE
+#ifdef OLED_ENABLE
     #define OLED_DISPLAY_128X64
     #define OLED_TIMEOUT 30000
 #endif

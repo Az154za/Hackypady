@@ -99,7 +99,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 #endif
 
 // OLED display for video editors
-#ifdef OLED_DRIVER_ENABLE
+#ifdef OLED_ENABLE
 void oled_task_user(void) {
     oled_write_P(PSTR("Video Edit\n"), false);
     oled_write_P(PSTR("Layer: "), false);

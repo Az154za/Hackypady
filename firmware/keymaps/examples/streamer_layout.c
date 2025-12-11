@@ -144,6 +144,11 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 }
 
 // Stream status indicator (set from OBS)
+// Note: These variables and function are provided as an example for
+// integration with OBS via custom scripts or plugins. To use:
+// 1. Set streaming/recording booleans via raw HID or serial
+// 2. Call stream_status_update() in matrix_scan_user() or similar
+// 3. Configure OBS to send status updates via websocket/plugin
 bool streaming = false;
 bool recording = false;
 
@@ -165,7 +170,7 @@ void stream_status_update(void) {
 #endif
 
 // OLED for stream info
-#ifdef OLED_DRIVER_ENABLE
+#ifdef OLED_ENABLE
 void oled_task_user(void) {
     oled_write_P(PSTR("Streamer\n"), false);
     oled_write_P(PSTR("Mode: "), false);

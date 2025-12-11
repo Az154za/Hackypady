@@ -18,7 +18,7 @@ BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = yes       # Enable RGB underglow
 AUDIO_ENABLE = no           # Audio output
 ENCODER_ENABLE = yes        # Enable rotary encoder
-OLED_DRIVER_ENABLE = yes    # Enable OLED display
+OLED_ENABLE = yes           # Enable OLED display
 LTO_ENABLE = yes           # Link Time Optimization
 
 # VIA Support
