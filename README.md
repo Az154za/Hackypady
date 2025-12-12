@@ -38,6 +38,7 @@ Tip: identify your XIAO RP2040 pin labels on the silk/board and change the firmw
 3. Wire the switches into a diode matrix (each switch in series with a diode) to allow scanning with fewer pins.
 4. Connect the encoder and OLED to the RP2040 according to the pinout you plan to use.
 5. Double-check power (3.3V) and ground connections before powering.
+<img width="1302" height="695" alt="image" src="https://github.com/user-attachments/assets/2aff2f6d-4d35-4c09-a52f-2ba0c0e41045" />
 
 ## Firmware / Software
 This project is firmware-agnostic — you can implement the key scanning and HID behaviour using:
