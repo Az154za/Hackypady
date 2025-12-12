@@ -1,4 +1,4 @@
-# Hackypady
+
 # Hackypady
 
 Hackypady is a compact, highly-customizable macro keyboard built around the Seeed XIAO RP2040.  
