@@ -30,6 +30,7 @@ Adjust pins to match your board layout and firmware pin definitions. This is onl
 - GND and VCC: common power rails (3.3V)
 
 Tip: identify your XIAO RP2040 pin labels on the silk/board and change the firmware pin definitions to match.
+<img width="1168" height="565" alt="image" src="https://github.com/user-attachments/assets/a54b6f1d-69b7-4c6c-9a87-2f4edc9ed65b" />
 
 ## Assembly
 1. Mount the OLED and encoder where visible/easy to reach.
