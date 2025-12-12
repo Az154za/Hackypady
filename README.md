@@ -48,7 +48,8 @@ Tip: identify your XIAO RP2040 pin labels on the silk/board and change the firmw
 
 
 
-<img width="1302" height="695" alt="image" src="https://github.com/user-attachments/assets/2aff2f6d-4d35-4c09-a52f-2ba0c0e41045" />
+<img width="698" height="619" alt="image" src="https://github.com/user-attachments/assets/fcdff6e4-3bd0-4e0e-9db7-c8977333857f" />
+
 
 ## Firmware / Software
 This project is firmware-agnostic — you can implement the key scanning and HID behaviour using:
