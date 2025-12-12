@@ -4,6 +4,8 @@
 Hackypady is a compact, highly-customizable macro keyboard built around the Seeed XIAO RP2040.  
 It combines a 0.91" OLED display, a rotary encoder, and a 9-button matrix (3×3) using only 6 GPIO pins.  
 Designed for hobbyists and makers who want a small, programmable input device for shortcuts, media control, macros or external automation.
+
+
 <img width="881" height="574" alt="image" src="https://github.com/user-attachments/assets/4151a5bc-6b65-43c4-9100-af3bb7bcb649" />
 
 
@@ -32,6 +34,8 @@ Adjust pins to match your board layout and firmware pin definitions. This is onl
 - GND and VCC: common power rails (3.3V)
 
 Tip: identify your XIAO RP2040 pin labels on the silk/board and change the firmware pin definitions to match.
+
+
 <img width="1168" height="565" alt="image" src="https://github.com/user-attachments/assets/a54b6f1d-69b7-4c6c-9a87-2f4edc9ed65b" />
 
 ## Assembly
@@ -40,6 +44,9 @@ Tip: identify your XIAO RP2040 pin labels on the silk/board and change the firmw
 3. Wire the switches into a diode matrix (each switch in series with a diode) to allow scanning with fewer pins.
 4. Connect the encoder and OLED to the RP2040 according to the pinout you plan to use.
 5. Double-check power (3.3V) and ground connections before powering.
+
+
+
 <img width="1302" height="695" alt="image" src="https://github.com/user-attachments/assets/2aff2f6d-4d35-4c09-a52f-2ba0c0e41045" />
 
 ## Firmware / Software
