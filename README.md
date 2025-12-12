@@ -56,6 +56,7 @@ This project is firmware-agnostic — you can implement the key scanning and HID
 - CircuitPython (learn quick prototyping and fast iteration)
 - Arduino / RP2040 Arduino cores (C++ with libraries)
 - PlatformIO projects or custom C/C++ firmware
+- However In this Project I used circuit python with the library KMK  for its ease of use
 
 Basic steps:
 1. Clone this repository locally.
