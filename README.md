@@ -27,7 +27,7 @@ Here is my PCB with the schematic .it's made in Kicad .in This case I did the si
 The firmware is made with KMK python to set up the initiation of buttons and the encoder up and down volume 
 
 ## About this project
-This project is highly scalable depends on what micro controller you want to use or what's ur idea 
+This project is highly scalable and depends on what micro controller you want to use or what's ur idea 
 
 ## Bill of Materials 
 - 1 × Seeed XIAO RP2040 (or compatible RP2040 board)
