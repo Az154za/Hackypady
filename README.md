@@ -6,13 +6,16 @@ Hackypady is a 9 key keyboard with one 0.91" OLED dispaly , 1 rotatory encoder ,
 
 ##PCB
 
+
+<img width="698" height="619" alt="image" src="https://github.com/user-attachments/assets/fcdff6e4-3bd0-4e0e-9db7-c8977333857f" />
+<img width="1168" height="565" alt="image" src="https://github.com/user-attachments/assets/a54b6f1d-69b7-4c6c-9a87-2f4edc9ed65b" />
 ## Bill of Materials 
 - 1 × Seeed XIAO RP2040 (or compatible RP2040 board)
 - 1 × 0.91" OLED (I2C, 128×32 or 128×64)
 - 1 × Rotary encoder switch or not ( it's an option)
 - 9 × push buttons (mechanical or tactile)
 - 9 × diodes (e.g., 1N4148) if using matrix scanning
-<img width="1168" height="565" alt="image" src="https://github.com/user-attachments/assets/a54b6f1d-69b7-4c6c-9a87-2f4edc9ed65b" />
+
 
 ## Assembly
 1. Mount the OLED and encoder where visible/easy to reach.
@@ -23,7 +26,7 @@ Hackypady is a 9 key keyboard with one 0.91" OLED dispaly , 1 rotatory encoder ,
 
 <img width="1110" height="689" alt="image" src="https://github.com/user-attachments/assets/f3de322c-5382-45b3-9de3-15e9c377ea70" />
 
-<img width="698" height="619" alt="image" src="https://github.com/user-attachments/assets/fcdff6e4-3bd0-4e0e-9db7-c8977333857f" />
+
 
 
 ## Firmware / Software
