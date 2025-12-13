@@ -1,20 +1,15 @@
 
 # Hackypady
 
-Hackypady is a 9 key keyboard with one 0.91" OLED dispaly , 1 rotatory encoder , 3 multicolor LEDs (RGB) it does contain the XIAO seeed RP 2040 
+Hackypady is a 9 key keyboard with one 0.91" OLED dispaly , 1 rotatory encoder , 3 multicolor LEDs (RGB) it does contain the XIAO seeed RP 2040 its objectif is to make u have fast access to ur favourite apps , shortcuts ....
 
 
 ##PCB
-
+Here is my PCB with the schematic .it's made in Kicad .in This case I did the simple rotatory encoder because I have no pins digital pins  
 
 <img width="698" height="619" alt="image" src="https://github.com/user-attachments/assets/fcdff6e4-3bd0-4e0e-9db7-c8977333857f" />
 <img width="1168" height="565" alt="image" src="https://github.com/user-attachments/assets/a54b6f1d-69b7-4c6c-9a87-2f4edc9ed65b" />
-## Bill of Materials 
-- 1 × Seeed XIAO RP2040 (or compatible RP2040 board)
-- 1 × 0.91" OLED (I2C, 128×32 or 128×64)
-- 1 × Rotary encoder switch or not ( it's an option)
-- 9 × push buttons (mechanical or tactile)
-- 9 × diodes (e.g., 1N4148) if using matrix scanning
+
 
 
 ## Assembly
@@ -28,16 +23,15 @@ Hackypady is a 9 key keyboard with one 0.91" OLED dispaly , 1 rotatory encoder ,
 
 
 
-
 ## Firmware / Software
-This project is firmware-agnostic — you can implement the key scanning and HID behaviour using:
-- CircuitPython (learn quick prototyping and fast iteration)
-- Arduino / RP2040 Arduino cores (C++ with libraries)
-- PlatformIO projects or custom C/C++ firmware
-- However In this Project I used circuit python with the library KMK  for its ease of use
+The firmware is made with KMK python to set up the initiation of buttons and the encoder up and down volume 
 
-## Credits
-Built with RP2040 community support and open-source libraries. Thanks to everyone who shares code and hardware designs.
+## About this project
+This project is highly scalable depends on what micro controller you want to use or what's ur idea 
 
-feel free to adapt, extend and share your improvements!
-```
+## Bill of Materials 
+- 1 × Seeed XIAO RP2040 (or compatible RP2040 board)
+- 1 × 0.91" OLED (I2C, 128×32 or 128×64)
+- 1 × Rotary encoder switch or not ( it's an option)
+- 9 × push buttons
+- 9 × diodes (1N4148) for matrix design
